@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace PR
 {
-    internal class Human
+    internal class Human:Sinif
     {
 
-
+        
         public string Name { get; set; }
         public string Surname { get; set; }
         public int Age {  get; set; }

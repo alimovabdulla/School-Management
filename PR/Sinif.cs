@@ -6,23 +6,8 @@ using System.Threading.Tasks;
 
 namespace PR
 {
-    internal class Student:Human
+    internal class Sinif
     {
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
+        public string Cname { get; set; }
     }
 }
