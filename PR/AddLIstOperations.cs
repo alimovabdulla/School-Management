@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static PR.Qiymet;
 
 namespace PR
 {
@@ -11,11 +12,12 @@ namespace PR
 
 
 
+        
 
-         
 
         public static void AddTeacher()
         {
+            int count = 1;
 
             try
             {
@@ -35,14 +37,14 @@ namespace PR
 
                 if (yas < 22)
                 {
-                    Console.WriteLine("Zehmet olmasa Dogru Melumat qeyd Edin!");
+                    Console.WriteLine("         Emeliyyat Ugursuzdur Zehmet olmasa Dogru Melumat qeyd Edin!");
                 }
                 else if (yas > 75)
                 {
-                    Console.WriteLine("Zehmet olmasa Dogru Melumat qeyd Edin!");
+                    Console.WriteLine("         Emeliyyat Ugursuzdur Zehmet olmasa Dogru Melumat qeyd Edin!");
 
                 }
-                else { teachers.Add(new Teacher { Name = name, Surname = surname, Age = yas, Cname = sinf}); }
+                else { teachers.Add(new Teacher { Name = name, Surname = surname, Age = yas, Cname = sinf }); Console.WriteLine("                          Melumat Qeyd Edildi!"); }
 
 
             }
@@ -55,11 +57,11 @@ namespace PR
         
         public static void ListTeachers()
         {
-
+            int count = 1;
 
             foreach (var teacher in teachers)
             {
-                Console.WriteLine("                                Muellim:                            ");
+                Console.WriteLine($"                                {count++})                           ");
                 Console.WriteLine("                                                                    ");
                 Console.WriteLine($"            Soyadi: {teacher.Surname}   Adi:{teacher.Name}    Yasi:{teacher.Age}  Sinif:{teacher.Cname}    ");
 
@@ -72,10 +74,10 @@ namespace PR
 
         public static void AddStudent()
         {
+             
+        int count = 1;
 
-
-
-           try
+            try
            {
 
                 Console.WriteLine("                                Adiniz:");
@@ -86,19 +88,23 @@ namespace PR
                 int yas = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("                                Sinif:");
                 string sinf = Console.ReadLine();
-                if (yas >= 20)
+                Console.WriteLine("                               Qiymet:");
+                int quymet = Convert.ToInt32(Console.ReadLine());
+                if (yas >= 20 )
                 {
-                    Console.WriteLine("Zehmet olmasa Dogru Melumat qeyd Edin!");
+                    Console.WriteLine("         Emeliyyat Ugursuzdur Zehmet olmasa Dogru Melumat qeyd Edin!");
                 }
-                else if(yas<8)
+                else if(yas<8  )
                 {
-                    Console.WriteLine("Zehmet olmasa Dogru Melumat qeyd Edin!");
+                    Console.WriteLine("         Emeliyyat Ugursuzdur Zehmet olmasa Dogru Melumat qeyd Edin!");
                 }
+                 
                 else
-                { students.Add(new Student { Name = name, Surname = surname, Age = yas, Cname = sinf }); Console.WriteLine("Melumat Qeyd Edildi!"); } 
+                { 
+                        students.Add(new Student { Name = name, Surname = surname, Age = yas, Cname = sinf  }); Console.WriteLine("                          Melumat Qeyd Edildi!"); } 
                    
 
-
+                
            }
            catch { Console.WriteLine("Yalnis Emeliyyat!!!"); }
 
@@ -110,14 +116,14 @@ namespace PR
           
         }
         public static void ListStudent()
-        {
+        {int count = 1;
 
             foreach (var student in students)
             {
-                
-                Console.WriteLine("                                Sagird:                            ");
+
+                Console.WriteLine($"                                {count++})                           ");
                 Console.WriteLine("                                                                    ");
-                Console.WriteLine($"            Soyadi: {student.Surname}   Adi:{ student.Name}    Yasi:{student.Age}  Sinif:{student.Cname}    ");
+                Console.WriteLine($"            Soyadi: {student.Surname}   Adi:{ student.Name}    Yasi:{student.Age}  Sinif:{student.Cname} Qiymeti:{student._qiymet}    ");
             }
 
         }

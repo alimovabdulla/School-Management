@@ -73,7 +73,7 @@ namespace PR
               Console.WriteLine("|                                                                             |");
               Console.WriteLine("|                     Emeliyyat Ugurla Sona Catdi!                            |");
               Console.WriteLine("|                                                                             |");
-              Console.WriteLine("------------------------------------------------------------------------------");
+            Console.WriteLine("------------------------------------------------------------------------------");
 
 
 

@@ -13,8 +13,7 @@ namespace PR
 
 
 
- 
-
+       public string _qiymet { get; set; }
 
 
 

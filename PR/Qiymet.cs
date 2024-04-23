@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace PR
 {
-    internal class Qiymet
+      public class Qiymet
     {
 
 
-        enum EQiymet
+       public   enum qiymet
         {
 
 
