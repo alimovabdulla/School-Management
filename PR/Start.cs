@@ -10,6 +10,9 @@ namespace PR
     {
         public static void PStart()
         {
+           try
+           {
+
 
             Console.WriteLine(" ----------------------------------------------------------------------------");
             Console.WriteLine("|                          School Management                                 |");
@@ -25,11 +28,22 @@ namespace PR
             Console.WriteLine("*  *                                                                      *  *");
             Console.WriteLine("*   *                                                                    *   *");
             Console.WriteLine("*    *                                                                  *    *");
-            Console.WriteLine("*     *                                                                *     *");
-            Console.WriteLine("********                                                              ********");
+            Console.WriteLine("* </> *                                                                * </> *");
+            Console.WriteLine("********|                                                            |********");
             int secim = Convert.ToInt32(Console.ReadLine());
             Operation.OpTeacher(secim);
             Operation.OpStudent(secim);
+
+           }
+           catch
+           {
+                Console.WriteLine("                    ------------------------------------           ");
+                Console.WriteLine("                    |      ~  Yalnis Emeliyyat!  ~     |           ");
+                Console.WriteLine("                    ------------------------------------           ");
+                PStart();
+
+           }
+            
 
 
 

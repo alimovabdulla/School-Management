@@ -12,12 +12,7 @@ namespace PR
 
 
 
-
-       public string _qiymet { get; set; }
-
-
-
-
+        public string _Qiymet { get; set; }
 
 
 

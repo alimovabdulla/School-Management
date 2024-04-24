@@ -17,9 +17,13 @@ namespace PR
             Zeif=2,
             Normal=3,
             Yaxsi=4,
-            Ela=5
+            Ela=5,
+            MeqaBeyin=6
             
           
         }
+          
+       
+
     }
 }
