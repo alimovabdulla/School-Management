@@ -19,7 +19,7 @@ namespace PR
         public static void AddTeacher()
         {
             int count = 1;
-
+            Teacher teacher = new Teacher();
             try
             {
 
@@ -31,33 +31,14 @@ namespace PR
                 int yas = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("                                Sinifi:");
                 string sinf = Console.ReadLine();
-
-
-
-
-
-                if (yas < 22)
-                {
-                    Console.WriteLine("         Emeliyyat Ugursuzdur Muellimin yasi 22 den az ola bilmez!");
-                }
-                else if (yas > 75)
-                {
-                    Console.WriteLine("         Emeliyyat Ugursuzdur Muellimin yasi 75 den cox ola bilmez!");
-
-                }
+                teachers.Add(new Teacher { Name = name, Surname = surname, Age = yas, Cname = sinf });
                  
-                else  { 
-                    teachers.Add(new Teacher { Name = name, Surname = surname, Age = yas, Cname = sinf });
 
-                    Console.WriteLine("                 ------------------------------------           ");
-                    Console.WriteLine("                 |    ~  Melumat Qeyd Edildi!  ~    |           ");
-                    Console.WriteLine("                 ------------------------------------           ");
-                }
-                 
 
 
             }
-            catch {
+            catch
+            {
                 Console.WriteLine("                 ------------------------------------           ");
                 Console.WriteLine("                 |      ~  Yalnis Emeliyyat!  ~     |           ");
                 Console.WriteLine("                 ------------------------------------           ");
@@ -111,30 +92,22 @@ namespace PR
                     qiy = q.ToString();
                     
                 }
-              
-                if (yas >= 20 )
-                {
-                    Console.WriteLine("                   Sagirdin Yasi 20 den cox ola bilmez!!!");
-                }
-                else if(yas<8  )
-                {
-                    Console.WriteLine("                    Sagirdin yasi 8 den az ola bilmez!!!");
-                }
-                else if (quymet>6||quymet<2)
+                else if ((quymet > 6 || quymet < 2))
                 {
                     Console.WriteLine("                     Yalnis Qiymet qeyd ettiniz!!! ");
-                }                
+                }
                 else
-                { 
-                        students.Add(new Student { Name = name, Surname = surname, Age = yas, Cname = sinf , _Qiymet = qiy });
-                    Console.WriteLine("                 ------------------------------------           ");
-                    Console.WriteLine("                 |    ~  Melumat Qeyd Edildi!  ~    |           ");
-                    Console.WriteLine("                 ------------------------------------           ");
-                } 
-                   
+                {
 
-                
-           }
+                   students.Add(new Student { Name = name, Surname = surname, Age = yas, Cname = sinf, _Qiymet = qiy });
+
+                }
+               
+                 
+
+
+
+            }
            catch
             {
                 Console.WriteLine("                 ------------------------------------           ");

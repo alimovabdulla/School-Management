@@ -13,7 +13,30 @@ namespace PR
 
 
         public string _Qiymet { get; set; }
+        public int myVar;
 
+        public int Age
+        {
+            get { return myVar; }
+            set
+            {
+
+
+                if (value > 20 || value < 6)
+                {
+                    Console.WriteLine("    Emeliyyat Ugursuzdur Sagirdin yasi 20 den cox 6 dan az ola bilmez!");
+
+                }
+                else
+                {
+                    myVar = value;
+                    Console.WriteLine("                 ------------------------------------           ");
+                    Console.WriteLine("                 |    ~  Melumat Qeyd Edildi!  ~    |           ");
+                    Console.WriteLine("                 ------------------------------------           ");
+                }
+
+            }
+        }
 
 
 
