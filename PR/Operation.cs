@@ -25,8 +25,8 @@ namespace PR
 
                 while (_stop)
                 {
-
-
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.WriteLine("-                                                                            *");
                     Console.WriteLine("*                                                                            *");
                     Console.WriteLine("*                      Melumat Elave Etmek ucun 1                            *");
@@ -63,13 +63,13 @@ namespace PR
 
 
                 }
-                
 
 
 
 
 
-              Console.WriteLine("------------------------------------------------------------------------------");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("------------------------------------------------------------------------------");
               Console.WriteLine("|                                                                             |");
               Console.WriteLine("|                     Emeliyyat Ugurla Sona Catdi!                            |");
               Console.WriteLine("|                                                                             |");
@@ -103,7 +103,7 @@ namespace PR
                   while (_stop)
                   {
 
-
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.WriteLine("-                                                                            *");
                     Console.WriteLine("*                                                                            *");
                     Console.WriteLine("*                      Melumat Elave Etmek ucun 1                            *");
@@ -141,14 +141,14 @@ namespace PR
 
 
                   }
-                
 
 
 
 
 
 
-                    Console.WriteLine("------------------------------------------------------------------------------");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("------------------------------------------------------------------------------");
                     Console.WriteLine("|                                                                             |");
                     Console.WriteLine("|                     Emeliyyat Ugurla Sona Catdi!                            |");
                     Console.WriteLine("|                                                                             |");

@@ -29,10 +29,12 @@ namespace PR
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     myVar = value;
                     Console.WriteLine("                 ------------------------------------           ");
                     Console.WriteLine("                 |    ~  Melumat Qeyd Edildi!  ~    |           ");
                     Console.WriteLine("                 ------------------------------------           ");
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
 
             }

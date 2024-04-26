@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PR
 {
-    internal class InformationsBase
+    internal class School
     {
 
         public static List<Teacher> teachers = new List<Teacher>();

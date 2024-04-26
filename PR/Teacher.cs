@@ -12,12 +12,11 @@ namespace PR
 {
     class Teacher:Human
     {
+         
+        
+        public int myVar;
 
-
-		 
-		public int myVar;
-
-		public int Age
+	     public int Age
 		{
 			get { return myVar; }
 			set
@@ -26,19 +25,26 @@ namespace PR
 
 				if (value > 75||value<22)
 				{
+                    Console.ForegroundColor = ConsoleColor.Red;
+
                     Console.WriteLine("    Emeliyyat Ugursuzdur Muellimin yasi 22 den az 75 den cox ola bilmez!");
-					 
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
 				else { myVar = value;
+                    Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("                 ------------------------------------           ");
                         Console.WriteLine("                 |    ~  Melumat Qeyd Edildi!  ~    |           ");
-                        Console.WriteLine("                 ------------------------------------           ");}
+                        Console.WriteLine("                 ------------------------------------           ");
+
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+
 
                 }
             }
 
 
-
+       
 
 	}
 }

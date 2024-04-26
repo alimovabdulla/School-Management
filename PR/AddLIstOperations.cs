@@ -8,7 +8,7 @@ using static PR.Qiymet;
 
 namespace PR
 {
-    internal class AddLIstOperations:InformationsBase
+    internal class AddLIstOperations:School
     {
 
 
@@ -29,9 +29,23 @@ namespace PR
                 string surname = Console.ReadLine();
                 Console.WriteLine("                                Yasi:");
                 int yas = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("                                Sinifi:");
+                Console.WriteLine("                               Sinifi:");
                 string sinf = Console.ReadLine();
-                teachers.Add(new Teacher { Name = name, Surname = surname, Age = yas, Cname = sinf });
+                if (sinf=="" )
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("        Emeliyyat Ugursuzdur Zehmet Olmasa Sinifi Qeyd Edin!");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                 
+                else
+                {
+                    teachers.Add(new Teacher { Name = name, Surname = surname, Age = yas, Cname = sinf });
+
+                }
+                
+                   
+                
                  
 
 
@@ -39,6 +53,7 @@ namespace PR
             }
             catch
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("                 ------------------------------------           ");
                 Console.WriteLine("                 |      ~  Yalnis Emeliyyat!  ~     |           ");
                 Console.WriteLine("                 ------------------------------------           ");
@@ -55,7 +70,9 @@ namespace PR
 
             foreach (var teacher in teachers)
             {
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine($"                                {count++})                           ");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
                 Console.WriteLine("                                                                    ");
                 Console.WriteLine($"            Soyadi: {teacher.Surname}   Adi:{teacher.Name}    Yasi:{teacher.Age}  Sinif:{teacher.Cname}    ");
 
@@ -85,24 +102,20 @@ namespace PR
                 string sinf = Console.ReadLine();
                 Console.WriteLine("                                Qiymeti:");
                 int quymet = Convert.ToInt32(Console.ReadLine());
-                 
-                if (Enum.IsDefined(typeof(qiymet), quymet))
+                if (quymet >= 7 || quymet <= 1)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("                Zehmet Olmasa Duzgun Qiymet Qeyd edin!!!");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                else if (Enum.IsDefined(typeof(qiymet), quymet))
                 {
                     qiymet q = (qiymet)quymet;
                     qiy = q.ToString();
-                    
+                    students.Add(new Student { Name = name, Surname = surname, Age = yas, Cname = sinf, _Qiymet = qiy });
                 }
-                else if ((quymet > 6 || quymet < 2))
-                {
-                    Console.WriteLine("                     Yalnis Qiymet qeyd ettiniz!!! ");
-                }
-                else
-                {
-
-                   students.Add(new Student { Name = name, Surname = surname, Age = yas, Cname = sinf, _Qiymet = qiy });
-
-                }
-               
+                 
+                
                  
 
 
@@ -110,6 +123,7 @@ namespace PR
             }
            catch
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("                 ------------------------------------           ");
                 Console.WriteLine("                 |      ~  Yalnis Emeliyyat!  ~     |           ");
                 Console.WriteLine("                 ------------------------------------           ");
@@ -129,8 +143,9 @@ namespace PR
 
             foreach (var student in students)
             {
-
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine($"                                  {count++})                           ");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
                 Console.WriteLine("                                                                    ");
                 Console.WriteLine($"      Soyadi: {student.Surname}   Adi: { student.Name}    Yasi: {student.Age}  Sinif: {student.Cname} Qiymeti: {student._Qiymet}    ");
             }

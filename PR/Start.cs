@@ -13,7 +13,7 @@ namespace PR
            try
            {
 
-
+                Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(" ----------------------------------------------------------------------------");
             Console.WriteLine("|                          School Management                                 |");
             Console.WriteLine(" ----------------------------------------------------------------------------");
@@ -37,6 +37,7 @@ namespace PR
            }
            catch
            {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("                    ------------------------------------           ");
                 Console.WriteLine("                    |      ~  Yalnis Emeliyyat!  ~     |           ");
                 Console.WriteLine("                    ------------------------------------           ");
