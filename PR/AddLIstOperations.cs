@@ -74,7 +74,7 @@ namespace PR
                 Console.WriteLine($"                                {count++})                           ");
                 Console.ForegroundColor = ConsoleColor.DarkGray;
                 Console.WriteLine("                                                                    ");
-                Console.WriteLine($"            Soyadi: {teacher.Surname}   Adi:{teacher.Name}    Yasi:{teacher.Age}  Sinif:{teacher.Cname}    ");
+                Console.WriteLine($"            Soyadi: {teacher.Surname}   Adi:{teacher.Name}    Yasi:{teacher.Age}    Sinif:{teacher.Cname}    ");
 
             }
             

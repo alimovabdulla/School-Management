@@ -9,9 +9,13 @@ namespace PR
     internal class Start
     {
         public static void PStart()
+
         {
-           try
-           {
+            Console.WindowWidth = 79;
+            Console.WindowHeight = 40;
+
+            try
+            {
 
                 Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(" ----------------------------------------------------------------------------");
